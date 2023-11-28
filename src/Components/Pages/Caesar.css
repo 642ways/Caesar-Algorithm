@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+    background-image: url('/src/images/bg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 15px;
+  }
+  
+  label {
+    display: block;
+    font-size: 30px;
+    display: block;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  input,
+  textarea {
+    font-size: 48px;
+    color: #FFFFFF;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    background-color: transparent;
+    opacity: 0.9;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .button-encrypt {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .button-decrypt {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  }
+  
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  textarea {
+    height: 200px;
+    resize: none;
+    border-radius: 10px;
+  }
+  

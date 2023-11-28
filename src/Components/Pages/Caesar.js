@@ -17,7 +17,7 @@ const handleDecrypt = () => {
     setOutputText(decryptedText);
 }
 
-var caesarEnkripsi = function (plaintext, kunci) {
+const caesarEnkripsi = function (plaintext, kunci) {
     let ciphertext = "";
     let abc = /[a-z]/;
     for(let i=0; i<plaintext.length; i++){
@@ -27,7 +27,7 @@ var caesarEnkripsi = function (plaintext, kunci) {
     return ciphertext;
 }
 
-var caesarDekripsi = function (ciphertext, kunci) {
+const caesarDekripsi = function (ciphertext, kunci) {
     let plaintext = ""; 
     let abc = /[a-z]/;
     for(let i=0; i<ciphertext.length; i++){
@@ -38,20 +38,28 @@ var caesarDekripsi = function (ciphertext, kunci) {
 }
 
     return (
+    <div className='body'>
         <div>
-        <div>
-            <form>
+            <div>
+                <form>
                 <label>
                     Input Text:
                     <input type="text" value={inputText} onChange={(e) => setInputText(e.target.value)} />
                 </label>
+                </form>
+            </div>
+            <div>
+            <form>
                 <label>
                     Key:
-                    <input type="number" value={key} onChange={(e) => setKey(e.target.value)} />
+                    <input value={key} onChange={(e) => setKey(e.target.value)} />
                 </label>
-                <button type="button" onClick={handleEncrypt}>Encrypt</button>
-                <button type="button" onClick={handleDecrypt}>Decrypt</button>
             </form>
+            </div>
+        </div>
+        <div>
+            <button className='button-encrypt' type="button" onClick={handleEncrypt}>Encrypt</button>
+            <button className='button-decrypt' type="button" onClick={handleDecrypt}>Decrypt</button>
         </div>
         <div>
             <label>
